@@ -8,11 +8,11 @@ You can clone this project using
 
     git clone https://github.com/libgit2/libgit2
 
-After that, you can go to frontend directory to change some codes. When you are done, build the static version of React using
+After that, you can go to frontend directory to change some codes. When you are done, go to backen/api directory and build the static version of React using
 
     npm run build
 
-Aditionally, if you have already built the project before, you can use `npm run build-no-i` to skip the installation process. Then, to start serving the project from localhost, you can start the server by using this command from the root folder. 
+Aditionally, if you have already built the project before, you can use `npm run build-no-i` to skip the installation process. Then, to start serving the project from localhost, you can start the server by using this command from the api folder. 
 
     npm start
 The project will be hosted at http://localhost:3001/
