@@ -8,7 +8,7 @@ You can clone this project using
 
     git clone https://github.com/libgit2/libgit2
 
-After that, you can go to frontend directory to change some codes. When you are done, go to backen/api directory and build the static version of React using
+After that, you can go to frontend directory to change some codes. When you are done, go to backend/api directory and build the static version of React using
 
     npm run build
 

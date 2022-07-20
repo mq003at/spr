@@ -1,3 +1,5 @@
+import convertArrayToCSV from "convert-array-to-csv";
+
 // Functions handles the date
 function dateHandler(date) {
   /**
@@ -52,4 +54,20 @@ const dateArr = (startDay, endDay, mode) => {
   else {return ""}
 }
 
-export { dateHandler, dateArr };
+const downloadCsv = (data, seperator, fileName) => {
+  const file = csvMaker(data, seperator)
+  const elem = document.createElement("a");
+  elem.href = URL.createObjectURL(file);
+  elem.download = `${fileName}.csv`;
+  elem.click();
+}
+
+const csvMaker = (data, seperator) => {
+  const csvFromArrayOfArrays = convertArrayToCSV(data, {
+    separator: seperator
+  });
+  const file = new Blob([csvFromArrayOfArrays], {type: "text/plain"});
+  return file;
+}
+
+export { dateHandler, dateArr, downloadCsv, csvMaker };
